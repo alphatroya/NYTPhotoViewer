@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+typedef void(^NYTScallingImageViewLoadingCompletedBlock)(UIImage *image, NSError *error);
+
 @interface NYTScalingImageView : UIScrollView
 
 /**
@@ -24,6 +26,9 @@
  *  @return A fully initialized object.
  */
 - (instancetype)initWithImage:(UIImage *)image frame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
+
+
+- (instancetype)initWithURL:(NSURL *)url frame:(CGRect)frame placeholderImage:(UIImage *)placeholderImage completedBlock:(NYTScallingImageViewLoadingCompletedBlock)completedBlock;
 
 /**
  *  Updates the image in the image view and centers and zooms the new image.
