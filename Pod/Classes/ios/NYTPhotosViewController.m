@@ -167,11 +167,6 @@ static const UIEdgeInsets NYTPhotosViewControllerCloseButtinImageInsets = {3, 0,
     return self;
 }
 
-- (instancetype)initWithPhotosURL:(NSArray <NYTURLPhoto> *)photos initialIndex:(NSUInteger)index {
-    return [self initWithPhotos:photos initialPhoto:photos[index]];
-}
-
-
 - (void)setupPageViewControllerWithInitialPhoto:(id <NYTPhoto>)initialPhoto {
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionInterPageSpacingKey: @(NYTPhotosViewControllerInterPhotoSpacing)}];
     

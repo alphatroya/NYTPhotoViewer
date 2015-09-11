@@ -91,7 +91,7 @@ extern NSString * const NYTPhotosViewControllerDidDismissNotification;
 - (instancetype)initWithPhotos:(NSArray *)photos initialPhoto:(id <NYTPhoto>)initialPhoto NS_DESIGNATED_INITIALIZER;
 
 
-- (instancetype)initWithPhotosURL:(NSArray <NYTURLPhoto>*)photos initialIndex:(NSUInteger)index;
+- (instancetype)initWithPhotosURL:(NSArray *)photos initialIndex:(NSUInteger)index;
 
 /**
  *  Displays the specified photo. Can be called before the view controller is displayed. Calling with a photo not contained within the data source has no effect.
